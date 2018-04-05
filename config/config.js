@@ -9,7 +9,7 @@ const config = {
       name: 'chatnode'
     },
     port: process.env.PORT || 3000,
-    db: 'mysql://localhost/chatnode-development'
+    db: 'mysql://chatnode:chatnode@localhost/chatnode'
   },
 
   test: {
