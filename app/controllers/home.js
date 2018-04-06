@@ -4,14 +4,21 @@ const db = require('../models');
 const util= require('util')
 const morgan = require('morgan')
 var logger = morgan('conbined')
+var session = require('express-session')
 module.exports = (app) => {
   app.use('/', router);
+  app.use(session({
+    secret: 'userSession',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+  }))
 };
 
 router.get('/', (req, res, next) => {
   db.Article.findAll().then((articles) => {
     res.render('index', {
-      title: 'Generator-Express MVC',
+      title: 'Login',
       articles: articles
     });  
   });
@@ -26,6 +33,11 @@ router.post('/',(req,res)=>{
     console.log(util.inspect(user))
     if(user.password == req.body.user.password){
       console.log("ok")
+      if (!req.session.user) {
+        req.session.user = {}
+      }
+      req.session.user['mail']=user.mail
+      console.log(util.inspect(req.session.user))
     }else{
       console.log("ntm")
     }
