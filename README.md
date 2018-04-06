@@ -1,5 +1,5 @@
 # Easy Express NodeChat
-[alt text](https://api.travis-ci.org/Ivachko/EasyExpressNodeChat.svg?branch=master "Build status")
+![alt text](https://api.travis-ci.org/Ivachko/EasyExpressNodeChat.svg"Build status")
 A simple nodeJS chat service with Express and a Mysql database
 
 ## Installation
