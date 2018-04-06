@@ -10,6 +10,48 @@ A simple nodeJS chat service with Express and a Mysql database
 
  - Clone git repository `https://github.com/Ivachko/EasyExpressNodeChat.git`
  - Assemble the project `npm install && bower install`
+ - Don't forget to configure access to the database  `config/config.js`
+
+    ```javascript
+    const config = {
+        development: {
+            root: rootPath,
+            app: {
+            name: 'chatnode'
+            },
+            port: process.env.PORT || 3000,
+            /**
+             * Here change your config
+             */
+            db: 'mysql://user:password@host/chatnode'
+        },
+
+        test: {
+            root: rootPath,
+            app: {
+            name: 'chatnode'
+            },
+            port: process.env.PORT || 3000,
+            /**
+             * Here change your config
+             */
+            db: 'mysql://user:password@host/chatnode'
+        },
+
+        production: {
+            root: rootPath,
+            app: {
+            name: 'chatnode'
+            },
+            port: process.env.PORT || 3000,
+            /**
+             * Here change your config
+             */
+            db: 'mysql://user:password@host/chatnode'
+        }
+        }
+    ```
+
  - Launch the server `grunt`
 
 As simple as that !
