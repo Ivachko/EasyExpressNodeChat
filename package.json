@@ -18,7 +18,7 @@
     "scripts": {
       "start": "node app.js",
       "test": "NODE_ENV=test mocha --recursive test && standard",
-      "test:coverage": "NODE_ENV=test mocha --recursive test && standard",
+      "test:coverage": "nyc npm test",
       "test:unit": "mocha --recursive test/middleware test/models test/routes",
       "test:integration": "mocha --recursive test/integration"
     },
