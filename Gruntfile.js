@@ -7,10 +7,8 @@ module.exports = (grunt) => {
   require('time-grunt')(grunt)
   // load all grunt tasks
   require('load-grunt-tasks')(grunt)
-
   const reloadPort = 35729
   let files
-
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     develop: {
@@ -48,11 +46,9 @@ module.exports = (grunt) => {
       }
     }
   })
-
   grunt.config.requires('watch.js.files')
   files = grunt.config('watch.js.files')
   files = grunt.file.expand(files)
-
   grunt.registerTask('delayed-livereload', 'Live reload after the node server has restarted.', () => {
     const done = this.async()
     setTimeout(() => {
@@ -67,7 +63,6 @@ module.exports = (grunt) => {
       })
     }, 500)
   })
-
   grunt.registerTask('default', [
     'develop',
     'watch'
