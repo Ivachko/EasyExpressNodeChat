@@ -5,7 +5,7 @@ before_script: chmod 0777 ./node_modules/.bin/mocha
 addons:
     code_climate:
         repo_token: 2f1b5ff455bad206e89839be77d47f25e0d40b94249733fa8f96d2eb67a833a8
-script: istanbul cover node_modules/mocha/bin/mocha -- -R spec
+script: istanbul cover node_modules/mocha/bin/_mocha -- -R spec
 before_script:
   - npm install codeclimate-test-reporter istanbul -g
 after_script:
