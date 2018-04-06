@@ -2,7 +2,7 @@
 
 ![Build Status](https://travis-ci.org/Ivachko/EasyExpressNodeChat.svg?branch=master)
 ![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)
-
+![Maintainability](https://api.codeclimate.com/v1/badges/ef0ecb405ef077476e36/maintainability)
 A simple nodeJS chat service with Express and a Mysql database
 
 ## Installation
