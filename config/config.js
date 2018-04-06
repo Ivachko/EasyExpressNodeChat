@@ -1,5 +1,5 @@
 const path = require('path')
-const rootPath = path.normalize(path.join() + '/..')
+const rootPath = path.dirname(require.main.filename)
 const env = process.env.NODE_ENV || 'development'
 
 const config = {

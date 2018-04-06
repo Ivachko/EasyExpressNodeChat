@@ -37,7 +37,7 @@ router.post('/', (req, res) => {
         req.session.user['mail'] = user.mail
         console.log(util.inspect(req.session.user))
       } else {
-        console.log('ntm')
+        console.log('error login')
       }
     } else {
       console.log('user inexsitant')
