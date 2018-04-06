@@ -1,8 +1,6 @@
 // Example model
 
-
 module.exports = (sequelize, DataTypes) => {
-
   const Article = sequelize.define('Article', {
     title: DataTypes.STRING,
     url: DataTypes.STRING,
@@ -14,8 +12,7 @@ module.exports = (sequelize, DataTypes) => {
         // Article.hasMany(models.Comments);
       }
     }
-  });
+  })
 
-  return Article;
-};
-
+  return Article
+}

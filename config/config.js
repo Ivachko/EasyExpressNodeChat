@@ -1,6 +1,6 @@
-const path = require('path');
-const rootPath = path.normalize(__dirname + '/..');
-const env = process.env.NODE_ENV || 'development';
+const path = require('path')
+const rootPath = path.normalize(path.join() + '/..')
+const env = process.env.NODE_ENV || 'development'
 
 const config = {
   development: {
@@ -18,7 +18,7 @@ const config = {
       name: 'chatnode'
     },
     port: process.env.PORT || 3000,
-    db: 'mysql://localhost/chatnode-test'
+    db: 'mysql://chatnode:chatnode@localhost/chatnode'
   },
 
   production: {
@@ -29,6 +29,6 @@ const config = {
     port: process.env.PORT || 3000,
     db: 'mysql://localhost/chatnode-production'
   }
-};
+}
 
-module.exports = config[env];
+module.exports = config[env]
