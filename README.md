@@ -17,8 +17,6 @@ Run the tests locally with a `npm test` to make sure you didn't break anything.
 
 Then do a pull request with a description of what your changes are making, a CoreTeam member will review and come back to you if necessary or incorporate your changes into the code.
 
-Translated with www.DeepL.com/Translator
-
 ## Conventions
  - The code follows [Standard](https://github.com/standard/standard "Standard repo") conventions.
  - Be sure to write the doc comments and comment on the key points of your code, *in English*.
