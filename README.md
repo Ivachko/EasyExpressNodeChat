@@ -1,8 +1,8 @@
 # Easy Express NodeChat
 
-[![Build Status](https://travis-ci.org/Ivachko/EasyExpressNodeChat.svg?branch=master)]
+![Build Status](https://travis-ci.org/Ivachko/EasyExpressNodeChat.svg?branch=master)
 (https://travis-ci.org/Ivachko/EasyExpressNodeChat)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)]
+![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)
 (https://standardjs.com)
 
 A simple nodeJS chat service with Express and a Mysql database
