@@ -5,13 +5,23 @@ const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const compress = require('compression')
 const methodOverride = require('method-override')
-
+const engine = require('ejs-blocks')
+var passport = require('passport')
+var session = require('express-session')
+const db = require('../app/models')
 module.exports = (app, config) => {
   const env = process.env.NODE_ENV || 'development'
   app.locals.ENV = env
   app.locals.ENV_DEVELOPMENT = env === 'development'
-
+  app.use(session({
+    secret: 'keyboard cat',
+    resave: true,
+    saveUninitialized: true
+  })) // session secret
+  app.use(passport.initialize())
+  app.use(passport.session()) // persistent login sessions
   app.set('views', config.root + '/app/views')
+  app.engine('ejs', engine)
   app.set('view engine', 'ejs')
 
   // app.use(favicon(config.root + '/public/img/favicon.ico'));
@@ -29,7 +39,7 @@ module.exports = (app, config) => {
   controllers.forEach((controller) => {
     require(controller)(app)
   })
-
+  require('./passport/passport.js')(passport, db.User)
   app.use((req, res, next) => {
     var err = new Error('Not Found')
     err.status = 404
